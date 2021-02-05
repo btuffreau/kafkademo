@@ -24,3 +24,11 @@ In the DIRECTORY dir., run:
 `
 docker-compose up
 `
+
+This should make your kafka broker available on 127.0.0.1:9092, try it out but first, you'll need a client to work with.
+
+`
+docker run --rm --network docker_app-tier bitnami/kafka:2.5.0 kafka-topics.sh --bootstrap-server kafka:9092 --list
+`
+
+
